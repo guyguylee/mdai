@@ -3,128 +3,291 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="AuraSpot 개인정보처리방침 / AuraSpot Privacy Policy">
   <title>AuraSpot 개인정보처리방침</title>
   <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fb;
+      --surface: #ffffff;
+      --text: #242734;
+      --muted: #697386;
+      --accent: #4269d5;
+      --border: #e8ebf1;
+      --shadow: 0 8px 30px rgba(27, 37, 62, 0.055);
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-      line-height: 1.7;
       margin: 0;
-      background: #f7f8fb;
-      color: #222;
+      padding: 26px 18px 42px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", Arial, sans-serif;
+      line-height: 1.78;
+      overflow-wrap: break-word;
     }
     .wrap {
-      max-width: 860px;
-      margin: 40px auto;
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 34px 40px 44px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand { font-size: 19px; font-weight: 800; letter-spacing: -.035em; color: #273b65; }
+    .brand .spot { color: #338d79; }
+    .lang-switch {
+      display: inline-flex;
+      gap: 3px;
+      padding: 4px;
+      background: #f0f3fa;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+    }
+    .lang-switch button {
+      appearance: none;
+      border: 0;
+      min-width: 75px;
+      padding: 7px 12px;
+      border-radius: 8px;
+      background: transparent;
+      color: #586176;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 650;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+    .lang-switch button[aria-pressed="true"] {
+      color: #253d78;
       background: #fff;
-      padding: 40px 28px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 1px 5px rgba(39, 58, 92, .12);
     }
-    h1 { font-size: 32px; margin-bottom: 8px; }
-    h2 { margin-top: 32px; font-size: 22px; }
-    p, li { font-size: 16px; }
-    .date {
-      color: #666;
-      margin-bottom: 24px;
+    .lang-switch button:focus-visible { outline: 3px solid #78a7ff; outline-offset: 2px; }
+    h1 { margin: 0 0 6px; font-size: clamp(25px, 4.5vw, 32px); line-height: 1.33; letter-spacing: -.035em; }
+    .date { margin: 0 0 24px; font-size: 14px; color: var(--muted); }
+    h2 { margin: 32px 0 10px; font-size: 20px; line-height: 1.5; letter-spacing: -.025em; }
+    p { margin: 0 0 12px; font-size: 15px; }
+    ul { margin: 6px 0 17px; padding-left: 22px; }
+    li { margin: 5px 0; font-size: 15px; }
+    li::marker { color: #8795b1; }
+    [hidden] { display: none !important; }
+    @media (max-width: 620px) {
+      body { padding: 12px 10px 22px; }
+      .wrap { padding: 24px 20px 30px; border-radius: 14px; }
+      .topbar { margin-bottom: 22px; }
+      .brand { font-size: 17px; }
+      .lang-switch button { min-width: 67px; padding: 6px 9px; }
+      h2 { font-size: 18px; margin-top: 28px; }
+      p, li { font-size: 14.5px; }
     }
-    ul {
-      padding-left: 22px;
+    @media print {
+      body { background: white; padding: 0; }
+      .wrap { border: 0; box-shadow: none; max-width: none; padding: 0; }
+      .lang-switch { display: none; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>AuraSpot 개인정보처리방침</h1>
-    <p class="date">시행일자: 2026-03-16</p>
+  <main class="wrap">
+    <header class="topbar">
+      <div class="brand" aria-label="AuraSpot">Aura<span class="spot">Spot</span></div>
+      <nav class="lang-switch" aria-label="Privacy policy language / 개인정보처리방침 언어 선택">
+        <button id="choose-ko" type="button" aria-pressed="true" aria-controls="policy-ko" lang="ko">한국어</button>
+        <button id="choose-en" type="button" aria-pressed="false" aria-controls="policy-en" lang="en">English</button>
+      </nav>
+    </header>
 
-    <p>
-      양봉 주식회사(이하 "회사")는 AuraSpot 서비스(이하 "서비스")를 제공함에 있어
-      이용자의 개인정보를 중요하게 생각하며, 관련 법령을 준수합니다.
-      회사는 본 개인정보처리방침을 통해 이용자가 제공한 개인정보가 어떤 용도와 방식으로 이용되고 있으며,
-      이를 보호하기 위해 어떠한 조치를 취하고 있는지 안내드립니다.
-    </p>
+    <!-- 한국어: 앱에 게시한 개인정보처리방침 본문을 그대로 반영 -->
+    <article id="policy-ko" lang="ko" aria-labelledby="title-ko">
+      <h1 id="title-ko">AuraSpot 개인정보처리방침</h1>
+      <p class="date">시행일자: 2026-03-16</p>
+      <p>양봉 주식회사(이하 "회사")는 AuraSpot 서비스(이하 "서비스")를 제공함에 있어 이용자의 개인정보를 중요하게 생각하며, 관련 법령을 준수합니다. 회사는 본 개인정보처리방침을 통해 이용자가 제공한 개인정보가 어떤 용도와 방식으로 이용되고 있으며, 이를 보호하기 위해 어떠한 조치를 취하고 있는지 안내드립니다.</p>
 
-    <h2>1. 수집하는 개인정보 항목</h2>
-    <p>회사는 서비스 제공을 위해 다음과 같은 정보를 수집할 수 있습니다.</p>
-    <ul>
-      <li>회원 식별 정보: 이메일 주소, 로그인 식별자 등</li>
-      <li>서비스 이용 정보: 질문 입력 내용, 이용 기록, 접속 로그, 접속 일시, 오류 기록</li>
-      <li>기기 정보: 기기 모델, 운영체제 정보, 앱 버전, 기기 식별 정보</li>
-      <li>카메라 및 이미지 정보: 공간 분석 기능 제공을 위한 촬영 이미지 또는 이용자가 업로드한 이미지</li>
-      <li>문의 응대 정보: 고객센터 문의 내용 및 답변 내역</li>
-    </ul>
+      <h2>1. 수집하는 개인정보 항목</h2>
+      <p>회사는 서비스 제공을 위해 다음과 같은 정보를 수집할 수 있습니다.</p>
+      <ul>
+        <li>회원 식별 정보: 이메일 주소, 로그인 식별자, 이름, 닉네임 등</li>
+        <li>탄생 에너지 정보: 생년월일, 출생시간, 출생장소, 출생 좌표 및 관련 분석 정보</li>
+        <li>운세 및 관계 정보: 개인 운세, 관계운 분석을 위해 입력한 상대방 정보 및 분석 결과</li>
+        <li>서비스 이용 정보: 질문 입력 내용, 소원·기원 내용, 이용 기록, 접속 로그, 접속 일시, 오류 기록</li>
+        <li>결제 및 초대 정보: 구독 상태, 구매 내역, 친구초대 코드 및 보상 내역</li>
+        <li>기기 정보: 기기 모델, 운영체제 정보, 앱 버전, 기기 식별 정보</li>
+        <li>카메라 및 이미지 정보: 공간 분석 기능 제공을 위한 촬영 이미지 또는 이용자가 업로드한 이미지</li>
+        <li>문의 응대 정보: 고객센터 문의 내용 및 답변 내역</li>
+      </ul>
 
-    <h2>2. 개인정보 수집 및 이용 목적</h2>
-    <ul>
-      <li>회원 식별 및 서비스 제공</li>
-      <li>공간 분석, AI 답변 제공 및 결과 표시</li>
-      <li>서비스 품질 개선, 기능 고도화 및 오류 대응</li>
-      <li>고객 문의 응대 및 공지사항 전달</li>
-      <li>부정 이용 방지 및 서비스 안전성 확보</li>
-    </ul>
+      <h2>2. 개인정보 수집 및 이용 목적</h2>
+      <ul>
+        <li>회원 식별 및 서비스 제공</li>
+        <li>K-Astrology 기반 탄생 에너지(Birth Energy) 분석 및 개인 맞춤형 운세 제공</li>
+        <li>출생 날짜·시간·장소와 천문·시간 정보를 활용한 분석 및 결과 표시</li>
+        <li>관계운 분석, 소원·기원, 친구초대 등 서비스 기능 제공</li>
+        <li>AI 답변, 이미지·공간 분석 및 결과 제공</li>
+        <li>구독·결제 관리, 구매 복원 및 보상 지급</li>
+        <li>서비스 품질 개선, 기능 고도화 및 오류 대응</li>
+        <li>고객 문의 응대 및 공지사항 전달</li>
+        <li>부정 이용 방지 및 서비스 안전성 확보</li>
+      </ul>
 
-    <h2>3. 개인정보의 보관 및 이용 기간</h2>
-    <p>
-      회사는 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.
-      다만, 관계 법령에 따라 일정 기간 보관이 필요한 경우 해당 법령에서 정한 기간 동안 보관할 수 있습니다.
-    </p>
-    <ul>
-      <li>회원 탈퇴 시 또는 서비스 제공 목적 달성 시 지체 없이 파기</li>
-      <li>관련 법령에 따른 보관 의무가 있는 경우 해당 기간 동안 보관</li>
-    </ul>
+      <h2>3. 개인정보의 보관 및 이용 기간</h2>
+      <p>회사는 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 다만, 관계 법령에 따라 일정 기간 보관이 필요한 경우 해당 법령에서 정한 기간 동안 보관할 수 있습니다.</p>
+      <ul>
+        <li>회원 탈퇴 시 또는 서비스 제공 목적 달성 시 지체 없이 파기</li>
+        <li>관련 법령에 따른 보관 의무가 있는 경우 해당 기간 동안 보관</li>
+      </ul>
 
-    <h2>4. 개인정보의 제3자 제공</h2>
-    <p>
-      회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다.
-      다만, 이용자의 동의가 있거나 법령에 특별한 규정이 있는 경우에는 예외로 합니다.
-    </p>
+      <h2>4. 개인정보의 제3자 제공</h2>
+      <p>회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 이용자의 동의가 있거나 법령에 특별한 규정이 있는 경우에는 예외로 합니다.</p>
 
-    <h2>5. 개인정보 처리의 위탁</h2>
-    <p>
-      회사는 원활한 서비스 제공을 위해 필요한 범위 내에서 일부 업무를 외부 전문업체에 위탁할 수 있습니다.
-      이 경우 관련 법령에 따라 개인정보가 안전하게 관리되도록 필요한 조치를 취합니다.
-    </p>
+      <h2>5. 개인정보 처리의 위탁</h2>
+      <p>회사는 원활한 서비스 제공을 위해 필요한 범위 내에서 일부 업무를 외부 전문업체에 위탁할 수 있습니다. 이 경우 관련 법령에 따라 개인정보가 안전하게 관리되도록 필요한 조치를 취합니다.</p>
 
-    <h2>6. 이용자의 권리 및 행사 방법</h2>
-    <p>
-      이용자는 언제든지 자신의 개인정보에 대한 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다.
-      관련 요청은 아래 문의처를 통해 접수할 수 있으며, 회사는 관련 법령에 따라 지체 없이 조치하겠습니다.
-    </p>
+      <h2>6. 이용자의 권리 및 행사 방법</h2>
+      <p>이용자는 언제든지 자신의 개인정보에 대한 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다. 관련 요청은 아래 문의처를 통해 접수할 수 있으며, 회사는 관련 법령에 따라 지체 없이 조치하겠습니다.</p>
 
-    <h2>7. 개인정보의 파기 절차 및 방법</h2>
-    <p>
-      회사는 개인정보 보유 기간의 경과, 처리 목적 달성 등 개인정보가 불필요하게 되었을 때에는
-      지체 없이 해당 개인정보를 파기합니다.
-      전자적 파일 형태의 정보는 복구 또는 재생되지 않도록 안전한 기술적 방법으로 삭제합니다.
-    </p>
+      <h2>7. 개인정보의 파기 절차 및 방법</h2>
+      <p>회사는 개인정보 보유 기간의 경과, 처리 목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체 없이 해당 개인정보를 파기합니다. 전자적 파일 형태의 정보는 복구 또는 재생되지 않도록 안전한 기술적 방법으로 삭제합니다.</p>
 
-    <h2>8. 개인정보 보호를 위한 조치</h2>
-    <p>
-      회사는 개인정보의 안전성 확보를 위해 관리적, 기술적, 물리적 보호조치를 시행합니다.
-      또한 개인정보 접근 권한을 최소화하고, 개인정보가 안전하게 처리되도록 노력합니다.
-    </p>
+      <h2>8. 개인정보 보호를 위한 조치</h2>
+      <p>회사는 개인정보의 안전성 확보를 위해 관리적, 기술적, 물리적 보호조치를 시행합니다. 또한 개인정보 접근 권한을 최소화하고, 개인정보가 안전하게 처리되도록 노력합니다.</p>
 
-    <h2>9. 아동의 개인정보 보호</h2>
-    <p>
-      회사는 관련 법령에서 정한 경우를 제외하고 아동의 개인정보를 고의로 수집하지 않습니다.
-      아동의 개인정보가 수집된 사실이 확인되는 경우 필요한 조치를 취할 수 있습니다.
-    </p>
+      <h2>9. 아동의 개인정보 보호</h2>
+      <p>회사는 관련 법령에서 정한 경우를 제외하고 아동의 개인정보를 고의로 수집하지 않습니다. 아동의 개인정보가 수집된 사실이 확인되는 경우 필요한 조치를 취할 수 있습니다.</p>
 
-    <h2>10. 개인정보처리방침의 변경</h2>
-    <p>
-      본 개인정보처리방침은 관련 법령, 서비스 내용 변경 등에 따라 수정될 수 있으며,
-      변경 시 서비스 내 공지 또는 본 페이지를 통해 안내합니다.
-    </p>
+      <h2>10. 개인정보처리방침의 변경</h2>
+      <p>본 개인정보처리방침은 관련 법령, 서비스 내용 변경 등에 따라 수정될 수 있으며, 변경 시 서비스 내 공지 또는 본 페이지를 통해 안내합니다.</p>
 
-    <h2>11. 문의처</h2>
-    <ul>
-      <li>상호: 양봉 주식회사</li>
-      <li>대표: 지예진</li>
-      <li>사업자등록번호: 857-86-03315</li>
-      <li>주소: 서울특별시 금천구 가산디지털1로 120, 819호</li>
-      <li>고객센터 전화번호: 0507-1339-1833</li>
-      <li>통신판매업 신고번호: 2025-서울금천-1329호</li>
-    </ul>
-  </div>
+      <h2>11. 문의처</h2>
+      <ul>
+        <li>상호: 양봉 주식회사</li>
+        <li>대표: 지예진</li>
+        <li>사업자등록번호: 857-86-03315</li>
+        <li>주소: 서울특별시 금천구 가산디지털1로 120, 819호</li>
+        <li>고객센터 전화번호: 0507-1339-1833</li>
+        <li>통신판매업 신고번호: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+
+    <!-- English: 한국어 최신 정책과 항목별 의미를 일치시킨 번역 -->
+    <article id="policy-en" lang="en" aria-labelledby="title-en" hidden>
+      <h1 id="title-en">AuraSpot Privacy Policy</h1>
+      <p class="date">Effective Date: March 16, 2026</p>
+      <p>Yangbong Co., Ltd. (the “Company”) values your personal information and complies with applicable laws when providing the AuraSpot service (the “Service”). This Privacy Policy explains what personal information we use, how and why we use it, and the measures we take to protect it.</p>
+
+      <h2>1. Personal Information We May Collect</h2>
+      <p>We may collect the following information to provide the Service:</p>
+      <ul>
+        <li>Account identification: Email address, login identifier, name, nickname, and similar information.</li>
+        <li>Birth Energy information: Date of birth, time of birth, place of birth, birth location coordinates, and related analysis information.</li>
+        <li>Fortune and relationship information: Information about another person entered for personal fortune and relationship analyses, and the resulting analysis data.</li>
+        <li>Service usage information: Questions you enter, wishes and supportive messages, usage history, access logs, access times, and error records.</li>
+        <li>Purchases and invitations: Subscription status, purchase history, friend invitation codes, and reward history.</li>
+        <li>Device information: Device model, operating system information, app version, and device identifiers.</li>
+        <li>Camera and image information: Images captured or uploaded for the space analysis feature.</li>
+        <li>Customer support information: Inquiries submitted to customer support and records of our responses.</li>
+      </ul>
+
+      <h2>2. Purposes of Collection and Use</h2>
+      <ul>
+        <li>Identify users and provide the Service.</li>
+        <li>Analyze Birth Energy based on K-Astrology and provide personalized fortune content.</li>
+        <li>Perform analyses and display results using birth dates, times, locations, and astronomical and time-related information.</li>
+        <li>Provide features such as relationship insights, wishes and supportive messages, and friend invitations.</li>
+        <li>Provide AI responses and image and space analysis results.</li>
+        <li>Manage subscriptions and purchases, restore purchases, and issue rewards.</li>
+        <li>Improve service quality and features, and respond to errors.</li>
+        <li>Respond to customer inquiries and deliver service notices.</li>
+        <li>Prevent misuse and maintain the safety and security of the Service.</li>
+      </ul>
+
+      <h2>3. Retention and Use Period</h2>
+      <p>We delete personal information without undue delay once the purpose of its collection and use has been fulfilled. Where applicable laws require us to retain information for a certain period, we may keep it for the legally required period.</p>
+      <ul>
+        <li>Delete information without undue delay when you close your account or the purpose of providing the Service has been fulfilled.</li>
+        <li>Retain information for the required period where retention is mandated by applicable laws.</li>
+      </ul>
+
+      <h2>4. Disclosure to Third Parties</h2>
+      <p>As a general rule, we do not disclose users’ personal information to external third parties. Exceptions may apply when users have given consent or when disclosure is expressly permitted or required by law.</p>
+
+      <h2>5. Outsourcing of Personal Information Processing</h2>
+      <p>We may entrust certain processing activities to external service providers when necessary to operate the Service. In such cases, we take steps to ensure that personal information is handled securely in accordance with applicable laws.</p>
+
+      <h2>6. Your Rights and How to Exercise Them</h2>
+      <p>You may request access to, correction or deletion of, or suspension of the processing of your personal information at any time. Please submit requests through the contact details below. We will respond without undue delay in accordance with applicable laws.</p>
+
+      <h2>7. Procedures and Methods for Deletion</h2>
+      <p>We delete personal information without undue delay when its retention period has expired, the purpose of processing has been fulfilled, or the information is otherwise no longer needed. Electronic files are deleted using secure technical methods designed to prevent recovery or restoration.</p>
+
+      <h2>8. Measures to Protect Personal Information</h2>
+      <p>We implement administrative, technical, and physical safeguards to protect personal information. We also limit access privileges and work to ensure that personal information is processed securely.</p>
+
+      <h2>9. Children's Personal Information</h2>
+      <p>Except as permitted by applicable laws, we do not knowingly collect children's personal information. If we become aware that such information has been collected, we may take necessary steps to address the situation.</p>
+
+      <h2>10. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy to reflect changes in applicable laws or the Service. We will provide notice of changes through an in-app announcement or on this page.</p>
+
+      <h2>11. Contact Information</h2>
+      <ul>
+        <li>Company: Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>Representative: Ji Ye-jin (지예진)</li>
+        <li>Business Registration Number: 857-86-03315</li>
+        <li>Address: Room 819, 120 Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</li>
+        <li>Customer Support Phone: +82-507-1339-1833</li>
+        <li>Mail-Order Business Registration Number: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      'use strict';
+      var btnKo = document.getElementById('choose-ko');
+      var btnEn = document.getElementById('choose-en');
+      var pageKo = document.getElementById('policy-ko');
+      var pageEn = document.getElementById('policy-en');
+      var storageKey = 'auraspot_privacy_language';
+
+      function setLanguage(lang, remember) {
+        var english = lang === 'en';
+        pageKo.hidden = english;
+        pageEn.hidden = !english;
+        btnKo.setAttribute('aria-pressed', String(!english));
+        btnEn.setAttribute('aria-pressed', String(english));
+        document.documentElement.lang = english ? 'en' : 'ko';
+        document.title = english ? 'AuraSpot Privacy Policy' : 'AuraSpot 개인정보처리방침';
+        if (remember) {
+          try { localStorage.setItem(storageKey, english ? 'en' : 'ko'); } catch (e) { /* Storage may be unavailable. */ }
+        }
+      }
+
+      btnKo.addEventListener('click', function () { setLanguage('ko', true); });
+      btnEn.addEventListener('click', function () { setLanguage('en', true); });
+
+      var saved = null;
+      try { saved = localStorage.getItem(storageKey); } catch (e) { /* Storage may be unavailable. */ }
+      var browserLang = (navigator.language || 'ko').toLowerCase();
+      var initialLang = saved === 'ko' || saved === 'en'
+        ? saved
+        : (browserLang.indexOf('ko') === 0 ? 'ko' : 'en');
+      setLanguage(initialLang, false);
+    }());
+  </script>
 </body>
 </html>
