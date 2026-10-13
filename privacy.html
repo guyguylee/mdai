@@ -1,119 +1,69 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="AuraSpot 개인정보처리방침 / AuraSpot Privacy Policy">
-  <title>AuraSpot 개인정보처리방침</title>
+  <meta name="description" content="AuraSpot Privacy Policy — Available in 13 languages">
+  <title>AuraSpot Privacy Policy</title>
   <style>
-    :root {
-      color-scheme: light;
-      --bg: #f7f8fb;
-      --surface: #ffffff;
-      --text: #242734;
-      --muted: #697386;
-      --accent: #4269d5;
-      --border: #e8ebf1;
-      --shadow: 0 8px 30px rgba(27, 37, 62, 0.055);
-    }
+    :root { color-scheme: light; --bg:#f7f8fb; --surface:#fff; --text:#242734; --muted:#697386; --border:#e8ebf1; --shadow:0 8px 30px rgba(27,37,62,.055); }
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      padding: 26px 18px 42px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", Arial, sans-serif;
-      line-height: 1.78;
-      overflow-wrap: break-word;
+    body { margin:0; padding:26px 18px 42px; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Arial,sans-serif; line-height:1.78; overflow-wrap:break-word; }
+    .wrap { width:100%; max-width:880px; margin:0 auto; padding:34px 40px 44px; background:var(--surface); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); }
+    .topbar { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; margin-bottom:26px; padding-bottom:20px; border-bottom:1px solid var(--border); }
+    .brand { font-size:19px; font-weight:800; letter-spacing:-.035em; color:#000; white-space:nowrap; }
+    .brand .spot { color:#000; }
+    .language-control { display:flex; align-items:center; gap:9px; }
+    .language-control label { color:var(--muted); font-size:13px; font-weight:600; }
+    .language-control select { appearance:auto; -webkit-appearance:menulist; color:#293241; background:#f7f9fc; border:1px solid #dce2ed; border-radius:10px; font-size:14px; font-weight:600; font-family:inherit; padding:9px 12px; width:180px; max-width:65vw; cursor:pointer; }
+    .language-control select:focus-visible { outline:3px solid #8bb8fa; outline-offset:2px; }
+    h1 { margin:0 0 6px; font-size:clamp(25px,4.5vw,32px); line-height:1.33; letter-spacing:-.035em; }
+    .date { margin:0 0 24px; font-size:14px; color:var(--muted); }
+    h2 { margin:32px 0 10px; font-size:20px; line-height:1.5; letter-spacing:-.025em; }
+    p { margin:0 0 12px; font-size:15px; }
+    ul { margin:6px 0 17px; padding-left:22px; }
+    li { margin:5px 0; font-size:15px; }
+    li::marker { color:#8795b1; }
+    [hidden] { display:none !important; }
+    @media (max-width:620px) {
+      body { padding:12px 10px 22px; }
+      .wrap { padding:24px 20px 30px; border-radius:14px; }
+      .topbar { margin-bottom:22px; }
+      .brand { font-size:18px; }
+      .language-control label { display:none; }
+      .language-control select { width:155px; padding:8px; font-size:13px; }
+      h2 { font-size:18px; margin-top:28px; }
+      p,li { font-size:14.5px; }
     }
-    .wrap {
-      width: 100%;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 34px 40px 44px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-    }
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 26px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    .brand { font-size: 19px; font-weight: 800; letter-spacing: -.035em; color: #273b65; }
-    .brand .spot { color: #338d79; }
-    .lang-switch {
-      display: inline-flex;
-      gap: 3px;
-      padding: 4px;
-      background: #f0f3fa;
-      border: 1px solid var(--border);
-      border-radius: 11px;
-    }
-    .lang-switch button {
-      appearance: none;
-      border: 0;
-      min-width: 75px;
-      padding: 7px 12px;
-      border-radius: 8px;
-      background: transparent;
-      color: #586176;
-      font: inherit;
-      font-size: 14px;
-      font-weight: 650;
-      line-height: 1.4;
-      cursor: pointer;
-    }
-    .lang-switch button[aria-pressed="true"] {
-      color: #253d78;
-      background: #fff;
-      box-shadow: 0 1px 5px rgba(39, 58, 92, .12);
-    }
-    .lang-switch button:focus-visible { outline: 3px solid #78a7ff; outline-offset: 2px; }
-    h1 { margin: 0 0 6px; font-size: clamp(25px, 4.5vw, 32px); line-height: 1.33; letter-spacing: -.035em; }
-    .date { margin: 0 0 24px; font-size: 14px; color: var(--muted); }
-    h2 { margin: 32px 0 10px; font-size: 20px; line-height: 1.5; letter-spacing: -.025em; }
-    p { margin: 0 0 12px; font-size: 15px; }
-    ul { margin: 6px 0 17px; padding-left: 22px; }
-    li { margin: 5px 0; font-size: 15px; }
-    li::marker { color: #8795b1; }
-    [hidden] { display: none !important; }
-    @media (max-width: 620px) {
-      body { padding: 12px 10px 22px; }
-      .wrap { padding: 24px 20px 30px; border-radius: 14px; }
-      .topbar { margin-bottom: 22px; }
-      .brand { font-size: 17px; }
-      .lang-switch button { min-width: 67px; padding: 6px 9px; }
-      h2 { font-size: 18px; margin-top: 28px; }
-      p, li { font-size: 14.5px; }
-    }
-    @media print {
-      body { background: white; padding: 0; }
-      .wrap { border: 0; box-shadow: none; max-width: none; padding: 0; }
-      .lang-switch { display: none; }
-    }
+    @media print { body { background:#fff; padding:0; } .wrap { border:0; box-shadow:none; max-width:none; padding:0; } .language-control { display:none; } }
   </style>
 </head>
 <body>
   <main class="wrap">
     <header class="topbar">
       <div class="brand" aria-label="AuraSpot">Aura<span class="spot">Spot</span></div>
-      <nav class="lang-switch" aria-label="Privacy policy language / 개인정보처리방침 언어 선택">
-        <button id="choose-ko" type="button" aria-pressed="true" aria-controls="policy-ko" lang="ko">한국어</button>
-        <button id="choose-en" type="button" aria-pressed="false" aria-controls="policy-en" lang="en">English</button>
-      </nav>
+      <div class="language-control">
+        <label for="language-select">Language</label>
+        <select id="language-select" aria-label="Select privacy policy language">
+            <option value="ko">한국어</option>
+            <option value="en" selected>English</option>
+            <option value="ja">日本語</option>
+            <option value="zh-Hans">简体中文</option>
+            <option value="zh-Hant">繁體中文</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="pt">Português</option>
+            <option value="it">Italiano</option>
+            <option value="id">Bahasa Indonesia</option>
+            <option value="th">ไทย</option>
+            <option value="vi">Tiếng Việt</option>
+        </select>
+      </div>
     </header>
-
-    <!-- 한국어: 앱에 게시한 개인정보처리방침 본문을 그대로 반영 -->
-    <article id="policy-ko" lang="ko" aria-labelledby="title-ko">
+    <article id="policy-ko" lang="ko" aria-labelledby="title-ko" hidden>
       <h1 id="title-ko">AuraSpot 개인정보처리방침</h1>
       <p class="date">시행일자: 2026-03-16</p>
       <p>양봉 주식회사(이하 "회사")는 AuraSpot 서비스(이하 "서비스")를 제공함에 있어 이용자의 개인정보를 중요하게 생각하며, 관련 법령을 준수합니다. 회사는 본 개인정보처리방침을 통해 이용자가 제공한 개인정보가 어떤 용도와 방식으로 이용되고 있으며, 이를 보호하기 위해 어떠한 조치를 취하고 있는지 안내드립니다.</p>
@@ -182,9 +132,7 @@
         <li>통신판매업 신고번호: 2025-서울금천-1329호</li>
       </ul>
     </article>
-
-    <!-- English: 한국어 최신 정책과 항목별 의미를 일치시킨 번역 -->
-    <article id="policy-en" lang="en" aria-labelledby="title-en" hidden>
+    <article id="policy-en" lang="en" aria-labelledby="title-en">
       <h1 id="title-en">AuraSpot Privacy Policy</h1>
       <p class="date">Effective Date: March 16, 2026</p>
       <p>Yangbong Co., Ltd. (the “Company”) values your personal information and complies with applicable laws when providing the AuraSpot service (the “Service”). This Privacy Policy explains what personal information we use, how and why we use it, and the measures we take to protect it.</p>
@@ -253,41 +201,678 @@
         <li>Mail-Order Business Registration Number: 2025-서울금천-1329호</li>
       </ul>
     </article>
+    <article id="policy-ja" lang="ja" aria-labelledby="title-ja" hidden>
+      <h1 id="title-ja">AuraSpot プライバシーポリシー</h1>
+      <p class="date">施行日：2026年3月16日</p>
+      <p>Yangbong Co., Ltd.（양봉 주식회사、以下「当社」）は、AuraSpot（以下「本サービス」）の提供にあたり、利用者の個人情報を大切にし、適用される法令を遵守します。本ポリシーでは、収集する個人情報、その利用目的・方法、および保護のための取り組みについて説明します。</p>
+      <h2>1. 収集する個人情報</h2>
+      <p>本サービスの提供に必要な範囲で、以下の情報を収集する場合があります。</p>
+      <ul>
+        <li>アカウント識別情報：メールアドレス、ログインID、氏名、ニックネームなど</li>
+        <li>Birth Energy（生まれ持ったエネルギー）に関する情報：生年月日、出生時刻、出生地、出生地の座標、および関連する分析情報</li>
+        <li>運勢・人間関係に関する情報：個人の運勢や関係性の分析のために入力された相手の情報、および分析結果</li>
+        <li>利用状況に関する情報：入力した質問、願い事や応援メッセージ、利用履歴、アクセスログ、アクセス日時、エラー記録</li>
+        <li>購入・招待に関する情報：サブスクリプションの状態、購入履歴、友達招待コード、特典の付与履歴</li>
+        <li>端末情報：端末の機種、OS情報、アプリのバージョン、端末識別情報</li>
+        <li>カメラ・画像情報：空間分析機能で撮影した画像、または利用者がアップロードした画像</li>
+        <li>お問い合わせ情報：サポートへのお問い合わせ内容および回答履歴</li>
+      </ul>
+      <h2>2. 個人情報の利用目的</h2>
+      <ul>
+        <li>利用者の識別および本サービスの提供</li>
+        <li>K-Astrologyに基づくBirth Energyの分析および個別の運勢コンテンツの提供</li>
+        <li>生年月日・出生時刻・出生地および天文・時刻情報を用いた分析と結果の表示</li>
+        <li>人間関係の分析、願い事・応援メッセージ、友達招待などの機能の提供</li>
+        <li>AIによる回答、画像・空間分析および結果の提供</li>
+        <li>サブスクリプション・購入の管理、購入の復元および特典の付与</li>
+        <li>サービス品質の改善、機能向上および不具合への対応</li>
+        <li>お問い合わせ対応およびお知らせの配信</li>
+        <li>不正利用の防止およびサービスの安全性の確保</li>
+      </ul>
+      <h2>3. 個人情報の保管・利用期間</h2>
+      <p>当社は、個人情報の収集・利用目的が達成された場合、遅滞なく削除します。ただし、適用法令により一定期間の保存が義務付けられる場合は、その期間保存することがあります。</p>
+      <ul>
+        <li>退会時またはサービス提供の目的が達成された場合は、遅滞なく削除します。</li>
+        <li>法令で保存が義務付けられる場合は、所定の期間保存します。</li>
+      </ul>
+      <h2>4. 第三者への個人情報の提供</h2>
+      <p>原則として、利用者の個人情報を外部の第三者に提供しません。ただし、利用者の同意がある場合、または法令に特別の規定がある場合を除きます。</p>
+      <h2>5. 個人情報の取扱いの委託</h2>
+      <p>本サービスを円滑に運営するため、必要な範囲で外部の専門事業者に業務を委託することがあります。その際は、適用法令に従い、個人情報が安全に取り扱われるよう必要な措置を講じます。</p>
+      <h2>6. 利用者の権利と行使方法</h2>
+      <p>利用者は、自己の個人情報の開示、訂正、削除、利用停止をいつでも請求できます。以下のお問い合わせ先までご連絡ください。当社は適用法令に従い、遅滞なく対応します。</p>
+      <h2>7. 個人情報の削除手続き・方法</h2>
+      <p>保存期間の終了、処理目的の達成などにより個人情報が不要になった場合、遅滞なく削除します。電子ファイルは復元・再生ができないよう、安全な技術的方法で削除します。</p>
+      <h2>8. 個人情報保護のための措置</h2>
+      <p>個人情報を保護するため、管理的・技術的・物理的な安全対策を実施します。また、アクセス権限を必要最小限に制限し、安全な取扱いに努めます。</p>
+      <h2>9. 子どもの個人情報の保護</h2>
+      <p>適用法令で認められる場合を除き、子どもの個人情報を意図的に収集しません。収集されたことが判明した場合は、必要な措置を講じることがあります。</p>
+      <h2>10. 本ポリシーの変更</h2>
+      <p>法令やサービス内容の変更に応じて、本ポリシーを改定することがあります。変更時は、アプリ内のお知らせまたは本ページでご案内します。</p>
+      <h2>11. お問い合わせ先</h2>
+      <ul>
+        <li>会社名：Yangbong Co., Ltd.（양봉 주식회사）</li>
+        <li>代表者：Ji Ye-jin（지예진）</li>
+        <li>事業者登録番号：857-86-03315</li>
+        <li>所在地：大韓民国 ソウル特別市 衿川区 加山デジタル1路120、819号</li>
+        <li>カスタマーサポート電話番号：0507-1339-1833（韓国）</li>
+        <li>通信販売業届出番号：2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-zh-Hans" lang="zh-Hans" aria-labelledby="title-zh-Hans" hidden>
+      <h1 id="title-zh-Hans">AuraSpot 隐私政策</h1>
+      <p class="date">生效日期：2026年3月16日</p>
+      <p>Yangbong Co., Ltd.（양봉 주식회사，以下简称“公司”）在提供 AuraSpot 服务（以下简称“服务”）时重视用户的个人信息，并遵守适用法律法规。本政策说明我们可能收集哪些个人信息、如何及为何使用这些信息，以及为保护信息安全采取的措施。</p>
+      <h2>1. 我们可能收集的个人信息</h2>
+      <p>为提供服务，我们可能收集以下信息：</p>
+      <ul>
+        <li>账户识别信息：电子邮箱地址、登录标识、姓名、昵称等</li>
+        <li>出生能量信息：出生日期、出生时间、出生地点、出生地点坐标及相关分析信息</li>
+        <li>运势与关系信息：为分析个人运势及人际关系而输入的对方信息，以及相应分析结果</li>
+        <li>服务使用信息：用户输入的问题、心愿与祝福内容、使用记录、访问日志、访问时间和错误记录</li>
+        <li>购买与邀请信息：订阅状态、购买记录、好友邀请码及奖励记录</li>
+        <li>设备信息：设备型号、操作系统信息、应用版本和设备识别信息</li>
+        <li>相机与图片信息：用于空间分析功能的拍摄图片或用户上传的图片</li>
+        <li>客服信息：向客服提交的咨询内容及回复记录</li>
+      </ul>
+      <h2>2. 收集和使用个人信息的目的</h2>
+      <ul>
+        <li>识别用户身份并提供服务</li>
+        <li>基于 K-Astrology 分析出生能量（Birth Energy），提供个性化运势内容</li>
+        <li>结合出生日期、时间、地点及天文和时间信息进行分析并展示结果</li>
+        <li>提供关系分析、心愿与祝福、好友邀请等功能</li>
+        <li>提供 AI 回复以及图片、空间分析及其结果</li>
+        <li>管理订阅与购买、恢复购买项目并发放奖励</li>
+        <li>改进服务质量和功能，处理错误</li>
+        <li>回复用户咨询并发送服务通知</li>
+        <li>防止滥用，保障服务安全</li>
+      </ul>
+      <h2>3. 保存和使用期限</h2>
+      <p>当收集和使用个人信息的目的实现后，公司将及时删除相关信息。但法律法规要求保留一定期限的，我们可能依法在规定期限内保存。</p>
+      <ul>
+        <li>用户注销账户或服务目的实现时，及时删除相关信息。</li>
+        <li>法律要求保存的，按规定期限保留。</li>
+      </ul>
+      <h2>4. 向第三方提供信息</h2>
+      <p>原则上，我们不会向外部第三方提供用户的个人信息。但用户已同意或法律法规有特别规定的情况除外。</p>
+      <h2>5. 委托处理个人信息</h2>
+      <p>为顺利提供服务，我们可能在必要范围内委托外部专业服务商处理部分业务。在此情况下，我们会依照适用法律采取措施，确保个人信息得到安全处理。</p>
+      <h2>6. 用户权利及行使方式</h2>
+      <p>用户可随时申请查阅、更正、删除个人信息或停止处理相关信息。请通过下方联系方式提出申请，我们将依据适用法律及时处理。</p>
+      <h2>7. 删除程序和方式</h2>
+      <p>当保存期限届满、处理目的实现或个人信息不再必要时，公司将及时删除相关信息。电子文件将采用安全技术方法删除，以防止恢复或重建。</p>
+      <h2>8. 个人信息安全措施</h2>
+      <p>公司采取管理、技术和物理安全措施保护个人信息，并尽可能限制访问权限，努力确保信息处理安全。</p>
+      <h2>9. 儿童个人信息保护</h2>
+      <p>除适用法律允许的情况外，我们不会有意收集儿童的个人信息。若发现已收集此类信息，我们可能采取必要措施。</p>
+      <h2>10. 本政策的变更</h2>
+      <p>本政策可能随法律法规或服务内容的变化而调整。变更时，我们将通过应用内公告或本页面告知用户。</p>
+      <h2>11. 联系方式</h2>
+      <ul>
+        <li>公司：Yangbong Co., Ltd.（양봉 주식회사）</li>
+        <li>代表人：Ji Ye-jin（지예진）</li>
+        <li>企业登记号：857-86-03315</li>
+        <li>地址：韩国首尔特别市衿川区加山数码1路120号819室</li>
+        <li>客服电话：0507-1339-1833（韩国）</li>
+        <li>通信销售业申报号：2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-zh-Hant" lang="zh-Hant" aria-labelledby="title-zh-Hant" hidden>
+      <h1 id="title-zh-Hant">AuraSpot 隱私權政策</h1>
+      <p class="date">生效日期：2026年3月16日</p>
+      <p>Yangbong Co., Ltd.（양봉 주식회사，以下稱「本公司」）在提供 AuraSpot 服務（以下稱「本服務」）時重視使用者的個人資料，並遵守適用法令。本政策說明我們可能蒐集哪些個人資料、如何及為何使用這些資料，以及採取哪些保護措施。</p>
+      <h2>1. 我們可能蒐集的個人資料</h2>
+      <p>為提供本服務，我們可能蒐集以下資料：</p>
+      <ul>
+        <li>帳戶識別資料：電子郵件地址、登入識別碼、姓名、暱稱等</li>
+        <li>出生能量資料：出生日期、出生時間、出生地點、出生地點座標及相關分析資料</li>
+        <li>運勢與關係資料：為分析個人運勢及人際關係而輸入的對方資料，以及相關分析結果</li>
+        <li>服務使用資料：輸入的問題、心願與祝福內容、使用紀錄、存取紀錄、存取時間及錯誤紀錄</li>
+        <li>購買與邀請資料：訂閱狀態、購買紀錄、好友邀請碼及獎勵紀錄</li>
+        <li>裝置資料：裝置型號、作業系統資訊、應用程式版本及裝置識別資料</li>
+        <li>相機與圖片資料：供空間分析功能使用的拍攝圖片或使用者上傳的圖片</li>
+        <li>客服資料：提交的客服詢問內容及回覆紀錄</li>
+      </ul>
+      <h2>2. 蒐集及使用個人資料的目的</h2>
+      <ul>
+        <li>識別使用者身分並提供本服務</li>
+        <li>依據 K-Astrology 分析出生能量（Birth Energy），提供個人化運勢內容</li>
+        <li>運用出生日期、時間、地點及天文與時間資訊進行分析並顯示結果</li>
+        <li>提供關係分析、心願與祝福、好友邀請等功能</li>
+        <li>提供 AI 回覆，以及圖片與空間分析及其結果</li>
+        <li>管理訂閱和購買、恢復購買項目並發放獎勵</li>
+        <li>改善服務品質及功能，處理錯誤</li>
+        <li>回覆使用者詢問並傳達服務通知</li>
+        <li>防止濫用並維護服務安全</li>
+      </ul>
+      <h2>3. 資料保存及使用期間</h2>
+      <p>當個人資料的蒐集及使用目的達成後，本公司將儘速刪除相關資料。但法令要求保存一定期間者，我們可能依法於規定期間內保留。</p>
+      <ul>
+        <li>使用者註銷帳戶或服務目的達成時，儘速刪除資料。</li>
+        <li>法令要求保留者，依規定期限保存。</li>
+      </ul>
+      <h2>4. 向第三方提供資料</h2>
+      <p>原則上，本公司不會向外部第三方提供使用者個人資料。但取得使用者同意或法令另有規定者，不在此限。</p>
+      <h2>5. 委託處理個人資料</h2>
+      <p>為順利提供服務，本公司可能在必要範圍內委託外部專業服務商處理部分業務。屆時將依適用法令採取必要措施，確保個人資料受到安全處理。</p>
+      <h2>6. 使用者權利及行使方式</h2>
+      <p>使用者可隨時要求查閱、更正、刪除個人資料或停止處理。請透過下方聯絡方式提出申請，我們將依法儘速處理。</p>
+      <h2>7. 資料刪除程序及方式</h2>
+      <p>當保存期限屆滿、處理目的達成或資料不再必要時，本公司將儘速刪除。電子檔案將以安全的技術方式刪除，以避免復原或重建。</p>
+      <h2>8. 個人資料保護措施</h2>
+      <p>本公司採取管理、技術及實體安全措施保護個人資料，並盡可能限制存取權限，以確保資料受到安全處理。</p>
+      <h2>9. 兒童個人資料保護</h2>
+      <p>除適用法令允許的情況外，我們不會刻意蒐集兒童的個人資料。若發現已蒐集此類資料，可能採取必要措施。</p>
+      <h2>10. 本政策的變更</h2>
+      <p>本政策可能因法令或服務內容變更而修訂。修訂時將透過應用程式內公告或本頁面通知使用者。</p>
+      <h2>11. 聯絡方式</h2>
+      <ul>
+        <li>公司：Yangbong Co., Ltd.（양봉 주식회사）</li>
+        <li>代表人：Ji Ye-jin（지예진）</li>
+        <li>公司登記號碼：857-86-03315</li>
+        <li>地址：韓國首爾特別市衿川區加山數位1路120號819室</li>
+        <li>客服電話：0507-1339-1833（韓國）</li>
+        <li>通訊銷售業申報號碼：2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-es" lang="es" aria-labelledby="title-es" hidden>
+      <h1 id="title-es">Política de privacidad de AuraSpot</h1>
+      <p class="date">Fecha de entrada en vigor: 16 de marzo de 2026</p>
+      <p>Yangbong Co., Ltd. (양봉 주식회사, en adelante, «la Empresa») valora la privacidad de los usuarios y cumple la legislación aplicable al prestar AuraSpot (en adelante, «el Servicio»). Esta política explica qué datos personales podemos recopilar, cómo y para qué los utilizamos y qué medidas adoptamos para protegerlos.</p>
+      <h2>1. Datos personales que podemos recopilar</h2>
+      <p>Podemos recopilar los siguientes datos para prestar el Servicio:</p>
+      <ul>
+        <li>Datos de identificación de la cuenta: dirección de correo electrónico, identificador de inicio de sesión, nombre, apodo y datos similares.</li>
+        <li>Datos de energía de nacimiento (Birth Energy): fecha, hora y lugar de nacimiento, coordenadas del lugar de nacimiento y datos de análisis relacionados.</li>
+        <li>Datos sobre fortuna y relaciones: información de otra persona facilitada para los análisis de fortuna personal y relaciones, así como sus resultados.</li>
+        <li>Datos de uso: preguntas introducidas, deseos y mensajes de apoyo, historial de uso, registros y horas de acceso y registros de errores.</li>
+        <li>Datos de compras e invitaciones: estado de la suscripción, historial de compras, códigos de invitación de amigos e historial de recompensas.</li>
+        <li>Datos del dispositivo: modelo, sistema operativo, versión de la aplicación e identificadores del dispositivo.</li>
+        <li>Datos de cámara e imágenes: imágenes captadas o subidas por el usuario para la función de análisis de espacios.</li>
+        <li>Datos de atención al cliente: consultas enviadas y respuestas correspondientes.</li>
+      </ul>
+      <h2>2. Finalidades de la recopilación y el uso</h2>
+      <ul>
+        <li>Identificar a los usuarios y prestar el Servicio.</li>
+        <li>Analizar la energía de nacimiento mediante K-Astrology y ofrecer contenido de fortuna personalizado.</li>
+        <li>Realizar análisis y mostrar resultados utilizando fecha, hora y lugar de nacimiento, así como información astronómica y horaria.</li>
+        <li>Proporcionar análisis de relaciones, deseos y mensajes de apoyo e invitaciones de amigos.</li>
+        <li>Ofrecer respuestas mediante IA y resultados de análisis de imágenes y espacios.</li>
+        <li>Gestionar suscripciones y compras, restaurar compras y conceder recompensas.</li>
+        <li>Mejorar la calidad y las funciones del Servicio y resolver errores.</li>
+        <li>Responder consultas y enviar avisos del Servicio.</li>
+        <li>Prevenir usos indebidos y proteger la seguridad del Servicio.</li>
+      </ul>
+      <h2>3. Plazo de conservación y uso</h2>
+      <p>Eliminamos los datos personales sin demora indebida cuando se ha cumplido la finalidad para la que se recopilaron y utilizaron. Si la legislación exige conservarlos durante un período determinado, podremos mantenerlos durante ese plazo.</p>
+      <ul>
+        <li>Eliminamos los datos sin demora indebida cuando se cierra la cuenta o se cumple la finalidad del Servicio.</li>
+        <li>Conservamos los datos durante el período obligatorio cuando así lo exige la ley.</li>
+      </ul>
+      <h2>4. Comunicación a terceros</h2>
+      <p>Por regla general, no comunicamos datos personales a terceros externos. Podrán existir excepciones cuando el usuario haya dado su consentimiento o cuando una disposición legal especial lo permita o exija.</p>
+      <h2>5. Encargo del tratamiento</h2>
+      <p>Podemos encomendar determinadas actividades a proveedores externos cuando sea necesario para prestar el Servicio. En esos casos, adoptamos medidas para garantizar un tratamiento seguro de los datos conforme a la legislación aplicable.</p>
+      <h2>6. Derechos de los usuarios y cómo ejercerlos</h2>
+      <p>Puede solicitar en cualquier momento el acceso, la rectificación o la eliminación de sus datos personales, así como la suspensión de su tratamiento. Envíe su solicitud a través de los datos de contacto indicados abajo; responderemos sin demora indebida conforme a la legislación aplicable.</p>
+      <h2>7. Procedimiento y métodos de eliminación</h2>
+      <p>Eliminamos los datos personales sin demora indebida cuando finaliza su plazo de conservación, se alcanza la finalidad del tratamiento o dejan de ser necesarios. Los archivos electrónicos se eliminan mediante métodos técnicos seguros destinados a impedir su recuperación o reconstrucción.</p>
+      <h2>8. Medidas de protección</h2>
+      <p>Aplicamos medidas administrativas, técnicas y físicas para proteger los datos personales. También limitamos los permisos de acceso y procuramos que los datos se traten de forma segura.</p>
+      <h2>9. Datos personales de menores</h2>
+      <p>Salvo cuando lo permita la legislación aplicable, no recopilamos intencionadamente datos personales de menores. Si descubrimos que se han recopilado, podremos adoptar las medidas necesarias.</p>
+      <h2>10. Cambios en esta política</h2>
+      <p>Podemos actualizar esta política para reflejar cambios en la legislación o en el Servicio. Informaremos de los cambios mediante avisos en la aplicación o en esta página.</p>
+      <h2>11. Contacto</h2>
+      <ul>
+        <li>Empresa: Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>Representante: Ji Ye-jin (지예진)</li>
+        <li>Número de registro empresarial: 857-86-03315</li>
+        <li>Dirección: oficina 819, 120 Gasan digital 1-ro, Geumcheon-gu, Seúl, República de Corea</li>
+        <li>Teléfono de atención al cliente: 0507-1339-1833 (Corea del Sur)</li>
+        <li>Número de registro de venta a distancia: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-fr" lang="fr" aria-labelledby="title-fr" hidden>
+      <h1 id="title-fr">Politique de confidentialité d’AuraSpot</h1>
+      <p class="date">Date d’entrée en vigueur : 16 mars 2026</p>
+      <p>Yangbong Co., Ltd. (양봉 주식회사, ci-après « la Société ») attache une grande importance à la protection des données personnelles des utilisateurs et respecte les lois applicables dans le cadre du service AuraSpot (ci-après « le Service »). Cette politique décrit les données susceptibles d’être collectées, leurs finalités et les mesures prises pour les protéger.</p>
+      <h2>1. Données personnelles susceptibles d’être collectées</h2>
+      <p>Nous pouvons collecter les données suivantes pour fournir le Service :</p>
+      <ul>
+        <li>Identification du compte : adresse e-mail, identifiant de connexion, nom, pseudonyme et données similaires.</li>
+        <li>Énergie de naissance (Birth Energy) : date, heure et lieu de naissance, coordonnées géographiques du lieu de naissance et données d’analyse associées.</li>
+        <li>Fortune et relations : informations concernant une autre personne saisies pour les analyses de fortune personnelle et de relations, ainsi que les résultats obtenus.</li>
+        <li>Utilisation du Service : questions saisies, souhaits et messages de soutien, historique d’utilisation, journaux et horaires d’accès, rapports d’erreurs.</li>
+        <li>Achats et invitations : statut de l’abonnement, historique des achats, codes d’invitation et historique des récompenses.</li>
+        <li>Appareil : modèle, système d’exploitation, version de l’application et identifiants de l’appareil.</li>
+        <li>Appareil photo et images : images prises ou importées pour la fonctionnalité d’analyse des espaces.</li>
+        <li>Assistance : demandes adressées au service client et historique des réponses.</li>
+      </ul>
+      <h2>2. Finalités de la collecte et de l’utilisation</h2>
+      <ul>
+        <li>Identifier les utilisateurs et fournir le Service.</li>
+        <li>Analyser l’énergie de naissance selon la K-Astrology et proposer des contenus de fortune personnalisés.</li>
+        <li>Réaliser des analyses et afficher des résultats à partir des dates, heures et lieux de naissance, ainsi que de données astronomiques et horaires.</li>
+        <li>Proposer l’analyse des relations, les souhaits et messages de soutien ainsi que les invitations d’amis.</li>
+        <li>Fournir des réponses générées par l’IA et des résultats d’analyse d’images et d’espaces.</li>
+        <li>Gérer les abonnements et achats, restaurer les achats et attribuer des récompenses.</li>
+        <li>Améliorer la qualité et les fonctionnalités du Service et corriger les erreurs.</li>
+        <li>Répondre aux demandes et transmettre des annonces relatives au Service.</li>
+        <li>Prévenir les utilisations abusives et assurer la sécurité du Service.</li>
+      </ul>
+      <h2>3. Durée de conservation et d’utilisation</h2>
+      <p>Nous supprimons les données personnelles sans retard injustifié dès que la finalité de leur collecte et de leur utilisation a été atteinte. Si la loi impose une conservation pendant une durée déterminée, nous pouvons les conserver pendant cette durée.</p>
+      <ul>
+        <li>Suppression sans retard injustifié à la fermeture du compte ou lorsque l’objectif du Service est atteint.</li>
+        <li>Conservation pendant la durée légalement requise lorsqu’une obligation s’applique.</li>
+      </ul>
+      <h2>4. Communication à des tiers</h2>
+      <p>En principe, nous ne communiquons pas les données personnelles des utilisateurs à des tiers externes, sauf si l’utilisateur y consent ou si une disposition légale particulière le permet ou l’exige.</p>
+      <h2>5. Sous-traitance du traitement</h2>
+      <p>Nous pouvons confier certaines opérations à des prestataires externes lorsque cela est nécessaire au fonctionnement du Service. Nous prenons alors les mesures requises pour assurer un traitement sécurisé des données conformément aux lois applicables.</p>
+      <h2>6. Vos droits et leur exercice</h2>
+      <p>Vous pouvez demander à tout moment l’accès, la rectification ou la suppression de vos données personnelles, ou l’arrêt de leur traitement. Adressez votre demande aux coordonnées ci-dessous ; nous y répondrons sans retard injustifié conformément aux lois applicables.</p>
+      <h2>7. Procédures et méthodes de suppression</h2>
+      <p>Les données sont supprimées sans retard injustifié à l’expiration de leur durée de conservation, lorsque la finalité du traitement est atteinte ou lorsqu’elles ne sont plus nécessaires. Les fichiers électroniques sont supprimés au moyen de méthodes techniques sécurisées destinées à empêcher leur récupération ou leur reconstitution.</p>
+      <h2>8. Mesures de sécurité</h2>
+      <p>Nous mettons en œuvre des mesures organisationnelles, techniques et physiques pour protéger les données personnelles. Nous limitons également les droits d’accès et veillons à la sécurité du traitement.</p>
+      <h2>9. Données personnelles des enfants</h2>
+      <p>Sauf lorsque la loi applicable l’autorise, nous ne collectons pas sciemment de données personnelles concernant des enfants. Si nous apprenons que de telles données ont été collectées, nous pouvons prendre les mesures nécessaires.</p>
+      <h2>10. Modifications de cette politique</h2>
+      <p>Cette politique peut être modifiée pour tenir compte des évolutions légales ou du Service. Les modifications seront annoncées dans l’application ou sur cette page.</p>
+      <h2>11. Nous contacter</h2>
+      <ul>
+        <li>Société : Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>Représentante : Ji Ye-jin (지예진)</li>
+        <li>Numéro d’enregistrement de l’entreprise : 857-86-03315</li>
+        <li>Adresse : bureau 819, 120 Gasan digital 1-ro, Geumcheon-gu, Séoul, République de Corée</li>
+        <li>Téléphone du service client : 0507-1339-1833 (Corée du Sud)</li>
+        <li>Numéro d’enregistrement de vente à distance : 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-de" lang="de" aria-labelledby="title-de" hidden>
+      <h1 id="title-de">AuraSpot-Datenschutzerklärung</h1>
+      <p class="date">Gültig ab: 16. März 2026</p>
+      <p>Yangbong Co., Ltd. (양봉 주식회사, im Folgenden „Unternehmen“) legt großen Wert auf den Schutz personenbezogener Daten und beachtet bei der Bereitstellung von AuraSpot (im Folgenden „Dienst“) die geltenden Gesetze. Diese Datenschutzerklärung erläutert, welche Daten wir erheben können, wofür wir sie verwenden und wie wir sie schützen.</p>
+      <h2>1. Welche personenbezogenen Daten wir erheben können</h2>
+      <p>Zur Bereitstellung des Dienstes können wir folgende Daten erheben:</p>
+      <ul>
+        <li>Kontodaten: E-Mail-Adresse, Anmeldekennung, Name, Spitzname und ähnliche Angaben.</li>
+        <li>Geburtsenergie (Birth Energy): Geburtsdatum, Geburtszeit, Geburtsort, geografische Koordinaten des Geburtsorts und zugehörige Analysedaten.</li>
+        <li>Glücks- und Beziehungsdaten: Angaben zu einer anderen Person, die für persönliche Glücks- und Beziehungsanalysen eingegeben werden, sowie die Analyseergebnisse.</li>
+        <li>Nutzungsdaten: eingegebene Fragen, Wünsche und unterstützende Nachrichten, Nutzungsverlauf, Zugriffsprotokolle und -zeiten sowie Fehlerprotokolle.</li>
+        <li>Kauf- und Einladungsdaten: Abonnementstatus, Kaufverlauf, Freundeseinladungscodes und Prämienverlauf.</li>
+        <li>Gerätedaten: Gerätemodell, Betriebssystem, App-Version und Gerätekennungen.</li>
+        <li>Kamera- und Bilddaten: für die Raumanalyse aufgenommene oder hochgeladene Bilder.</li>
+        <li>Supportdaten: Kundendienstanfragen und zugehörige Antworten.</li>
+      </ul>
+      <h2>2. Zwecke der Erhebung und Verwendung</h2>
+      <ul>
+        <li>Nutzer identifizieren und den Dienst bereitstellen.</li>
+        <li>Geburtsenergie auf Grundlage von K-Astrology analysieren und personalisierte Glücks- und Horoskopinhalte anbieten.</li>
+        <li>Analysen anhand von Geburtsdatum, -zeit und -ort sowie astronomischen und zeitbezogenen Informationen durchführen und Ergebnisse anzeigen.</li>
+        <li>Beziehungsanalysen, Wünsche und unterstützende Nachrichten sowie Freundeseinladungen ermöglichen.</li>
+        <li>KI-Antworten und Ergebnisse von Bild- und Raumanalysen bereitstellen.</li>
+        <li>Abonnements und Käufe verwalten, Käufe wiederherstellen und Prämien gewähren.</li>
+        <li>Dienstqualität und Funktionen verbessern sowie Fehler beheben.</li>
+        <li>Kundenanfragen beantworten und Mitteilungen versenden.</li>
+        <li>Missbrauch verhindern und die Sicherheit des Dienstes gewährleisten.</li>
+      </ul>
+      <h2>3. Speicherdauer und Verwendung</h2>
+      <p>Wir löschen personenbezogene Daten unverzüglich, sobald der Zweck ihrer Erhebung und Verwendung erfüllt ist. Soweit gesetzliche Aufbewahrungspflichten bestehen, können wir die Daten für den vorgeschriebenen Zeitraum speichern.</p>
+      <ul>
+        <li>Bei Kontolöschung oder Erfüllung des Dienstzwecks werden Daten unverzüglich gelöscht.</li>
+        <li>Bei gesetzlichen Aufbewahrungspflichten erfolgt die Speicherung für den vorgeschriebenen Zeitraum.</li>
+      </ul>
+      <h2>4. Weitergabe an Dritte</h2>
+      <p>Grundsätzlich geben wir personenbezogene Daten nicht an externe Dritte weiter. Ausnahmen gelten bei Einwilligung der Nutzer oder wenn besondere gesetzliche Bestimmungen die Weitergabe erlauben oder verlangen.</p>
+      <h2>5. Beauftragung externer Dienstleister</h2>
+      <p>Soweit für den Betrieb des Dienstes erforderlich, können wir externe Dienstleister mit einzelnen Verarbeitungstätigkeiten beauftragen. Dabei treffen wir Maßnahmen für einen sicheren Umgang mit den Daten gemäß geltendem Recht.</p>
+      <h2>6. Ihre Rechte und deren Ausübung</h2>
+      <p>Sie können jederzeit Auskunft, Berichtigung, Löschung oder die Aussetzung der Verarbeitung Ihrer personenbezogenen Daten verlangen. Bitte nutzen Sie dazu die unten stehenden Kontaktdaten. Wir bearbeiten Anfragen unverzüglich nach Maßgabe des geltenden Rechts.</p>
+      <h2>7. Verfahren und Methoden der Löschung</h2>
+      <p>Wir löschen personenbezogene Daten unverzüglich, wenn die Aufbewahrungsfrist abgelaufen, der Verarbeitungszweck erreicht oder die Speicherung nicht mehr erforderlich ist. Elektronische Dateien werden mit sicheren technischen Verfahren gelöscht, um eine Wiederherstellung zu verhindern.</p>
+      <h2>8. Schutzmaßnahmen</h2>
+      <p>Wir setzen organisatorische, technische und physische Schutzmaßnahmen ein. Zudem beschränken wir Zugriffsberechtigungen und sorgen für einen sicheren Umgang mit personenbezogenen Daten.</p>
+      <h2>9. Personenbezogene Daten von Kindern</h2>
+      <p>Außer in gesetzlich zulässigen Fällen erheben wir wissentlich keine personenbezogenen Daten von Kindern. Erfahren wir, dass solche Daten erhoben wurden, können wir erforderliche Maßnahmen ergreifen.</p>
+      <h2>10. Änderungen dieser Datenschutzerklärung</h2>
+      <p>Wir können diese Erklärung bei Änderungen der Gesetze oder des Dienstes aktualisieren. Über Änderungen informieren wir in der App oder auf dieser Seite.</p>
+      <h2>11. Kontakt</h2>
+      <ul>
+        <li>Unternehmen: Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>Vertretungsberechtigte Person: Ji Ye-jin (지예진)</li>
+        <li>Unternehmensregisternummer: 857-86-03315</li>
+        <li>Anschrift: Raum 819, 120 Gasan digital 1-ro, Geumcheon-gu, Seoul, Republik Korea</li>
+        <li>Kundendienst-Telefonnummer: 0507-1339-1833 (Südkorea)</li>
+        <li>Registrierungsnummer für den Versandhandel: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-pt" lang="pt" aria-labelledby="title-pt" hidden>
+      <h1 id="title-pt">Política de Privacidade do AuraSpot</h1>
+      <p class="date">Data de entrada em vigor: 16 de março de 2026</p>
+      <p>A Yangbong Co., Ltd. (양봉 주식회사, doravante «Empresa») valoriza a privacidade dos utilizadores e cumpre a legislação aplicável ao disponibilizar o AuraSpot (doravante «Serviço»). Esta política explica que dados pessoais podemos recolher, como e por que motivo os utilizamos e que medidas adotamos para os proteger.</p>
+      <h2>1. Dados pessoais que podemos recolher</h2>
+      <p>Podemos recolher os seguintes dados para disponibilizar o Serviço:</p>
+      <ul>
+        <li>Identificação da conta: endereço de e-mail, identificador de início de sessão, nome, alcunha e dados semelhantes.</li>
+        <li>Energia de nascimento (Birth Energy): data, hora e local de nascimento, coordenadas do local de nascimento e dados de análise relacionados.</li>
+        <li>Sorte e relações: informações sobre outra pessoa introduzidas para análises da sorte pessoal e das relações, bem como os resultados dessas análises.</li>
+        <li>Utilização do Serviço: perguntas introduzidas, desejos e mensagens de apoio, histórico de utilização, registos e horários de acesso e registos de erros.</li>
+        <li>Compras e convites: estado da subscrição, histórico de compras, códigos de convite de amigos e histórico de recompensas.</li>
+        <li>Dispositivo: modelo, sistema operativo, versão da aplicação e identificadores do dispositivo.</li>
+        <li>Câmara e imagens: imagens captadas ou carregadas para a funcionalidade de análise de espaços.</li>
+        <li>Apoio ao cliente: pedidos de assistência e respetivas respostas.</li>
+      </ul>
+      <h2>2. Finalidades da recolha e utilização</h2>
+      <ul>
+        <li>Identificar utilizadores e disponibilizar o Serviço.</li>
+        <li>Analisar a energia de nascimento com base na K-Astrology e fornecer conteúdos de sorte personalizados.</li>
+        <li>Realizar análises e apresentar resultados com base na data, hora e local de nascimento e em informações astronómicas e horárias.</li>
+        <li>Disponibilizar análises de relações, desejos e mensagens de apoio e convites de amigos.</li>
+        <li>Fornecer respostas de IA e resultados da análise de imagens e espaços.</li>
+        <li>Gerir subscrições e compras, restaurar compras e atribuir recompensas.</li>
+        <li>Melhorar a qualidade e as funcionalidades do Serviço e resolver erros.</li>
+        <li>Responder a pedidos de apoio e enviar avisos sobre o Serviço.</li>
+        <li>Prevenir utilizações indevidas e garantir a segurança do Serviço.</li>
+      </ul>
+      <h2>3. Prazo de conservação e utilização</h2>
+      <p>Eliminamos os dados pessoais sem demora injustificada quando a finalidade da recolha e utilização tiver sido cumprida. Quando a lei exigir a conservação durante um período específico, podemos manter os dados durante esse prazo.</p>
+      <ul>
+        <li>Eliminamos os dados sem demora injustificada após o encerramento da conta ou a concretização da finalidade do Serviço.</li>
+        <li>Conservamos os dados durante o prazo legalmente exigido, quando aplicável.</li>
+      </ul>
+      <h2>4. Divulgação a terceiros</h2>
+      <p>Regra geral, não divulgamos dados pessoais a terceiros externos. Podem existir exceções quando o utilizador der o seu consentimento ou quando disposições legais específicas o permitirem ou exigirem.</p>
+      <h2>5. Subcontratação do tratamento</h2>
+      <p>Podemos confiar determinadas atividades de tratamento a prestadores de serviços externos, quando necessário para o funcionamento do Serviço. Nesses casos, adotamos medidas para assegurar o tratamento seguro dos dados em conformidade com a lei aplicável.</p>
+      <h2>6. Direitos dos utilizadores e como exercê-los</h2>
+      <p>Pode solicitar, a qualquer momento, o acesso, a retificação ou a eliminação dos seus dados pessoais, bem como a suspensão do respetivo tratamento. Utilize os contactos abaixo; responderemos sem demora injustificada, nos termos da lei aplicável.</p>
+      <h2>7. Procedimentos e métodos de eliminação</h2>
+      <p>Eliminamos os dados sem demora injustificada quando o prazo de conservação terminar, a finalidade do tratamento for alcançada ou os dados deixarem de ser necessários. Os ficheiros eletrónicos são eliminados por métodos técnicos seguros, concebidos para impedir a sua recuperação.</p>
+      <h2>8. Medidas de segurança</h2>
+      <p>Aplicamos medidas administrativas, técnicas e físicas para proteger os dados pessoais. Limitamos também as permissões de acesso e procuramos garantir a segurança do tratamento.</p>
+      <h2>9. Dados pessoais de crianças</h2>
+      <p>Salvo quando permitido pela lei aplicável, não recolhemos intencionalmente dados pessoais de crianças. Se tivermos conhecimento dessa recolha, podemos tomar as medidas necessárias.</p>
+      <h2>10. Alterações a esta política</h2>
+      <p>Podemos atualizar esta política para refletir alterações legais ou do Serviço. As alterações serão comunicadas na aplicação ou nesta página.</p>
+      <h2>11. Contactos</h2>
+      <ul>
+        <li>Empresa: Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>Representante: Ji Ye-jin (지예진)</li>
+        <li>Número de registo comercial: 857-86-03315</li>
+        <li>Morada: sala 819, 120 Gasan digital 1-ro, Geumcheon-gu, Seul, República da Coreia</li>
+        <li>Telefone de apoio ao cliente: 0507-1339-1833 (Coreia do Sul)</li>
+        <li>Número de registo de venda à distância: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-it" lang="it" aria-labelledby="title-it" hidden>
+      <h1 id="title-it">Informativa sulla privacy di AuraSpot</h1>
+      <p class="date">Data di entrata in vigore: 16 marzo 2026</p>
+      <p>Yangbong Co., Ltd. (양봉 주식회사, di seguito la «Società») attribuisce grande importanza alla tutela dei dati personali degli utenti e rispetta le leggi applicabili nell’offrire AuraSpot (di seguito il «Servizio»). La presente informativa spiega quali dati personali possiamo raccogliere, come e perché li utilizziamo e quali misure adottiamo per proteggerli.</p>
+      <h2>1. Dati personali che possiamo raccogliere</h2>
+      <p>Per fornire il Servizio, possiamo raccogliere i seguenti dati:</p>
+      <ul>
+        <li>Identificazione dell’account: indirizzo e-mail, identificativo di accesso, nome, nickname e informazioni simili.</li>
+        <li>Energia di nascita (Birth Energy): data, ora e luogo di nascita, coordinate del luogo di nascita e relativi dati di analisi.</li>
+        <li>Fortuna e relazioni: dati di un’altra persona inseriti per analisi personali della fortuna e delle relazioni, nonché i risultati ottenuti.</li>
+        <li>Utilizzo del Servizio: domande inserite, desideri e messaggi di sostegno, cronologia d’uso, registri e orari di accesso, segnalazioni di errori.</li>
+        <li>Acquisti e inviti: stato dell’abbonamento, cronologia degli acquisti, codici di invito degli amici e storico dei premi.</li>
+        <li>Dispositivo: modello, sistema operativo, versione dell’app e identificativi del dispositivo.</li>
+        <li>Fotocamera e immagini: immagini scattate o caricate per la funzione di analisi degli spazi.</li>
+        <li>Assistenza clienti: richieste inviate e relative risposte.</li>
+      </ul>
+      <h2>2. Finalità della raccolta e dell’utilizzo</h2>
+      <ul>
+        <li>Identificare gli utenti e fornire il Servizio.</li>
+        <li>Analizzare l’energia di nascita secondo K-Astrology e offrire contenuti personalizzati sulla fortuna.</li>
+        <li>Effettuare analisi e mostrare risultati utilizzando data, ora e luogo di nascita e informazioni astronomiche e temporali.</li>
+        <li>Fornire analisi delle relazioni, desideri e messaggi di sostegno, nonché inviti agli amici.</li>
+        <li>Fornire risposte dell’IA e risultati dell’analisi di immagini e spazi.</li>
+        <li>Gestire abbonamenti e acquisti, ripristinare acquisti ed erogare premi.</li>
+        <li>Migliorare qualità e funzionalità del Servizio e risolvere errori.</li>
+        <li>Rispondere alle richieste degli utenti e inviare comunicazioni sul Servizio.</li>
+        <li>Prevenire gli abusi e garantire la sicurezza del Servizio.</li>
+      </ul>
+      <h2>3. Periodo di conservazione e utilizzo</h2>
+      <p>Eliminiamo i dati personali senza ingiustificato ritardo quando le finalità della raccolta e dell’utilizzo sono state raggiunte. Qualora la legge richieda la conservazione per un determinato periodo, possiamo conservarli per il tempo prescritto.</p>
+      <ul>
+        <li>I dati sono eliminati senza ingiustificato ritardo alla chiusura dell’account o al raggiungimento delle finalità del Servizio.</li>
+        <li>Se la legge impone la conservazione, i dati sono mantenuti per il periodo previsto.</li>
+      </ul>
+      <h2>4. Comunicazione a terzi</h2>
+      <p>In linea generale, non comunichiamo i dati personali degli utenti a terzi esterni. Sono previste eccezioni in presenza del consenso dell’utente o di specifiche disposizioni di legge.</p>
+      <h2>5. Affidamento del trattamento a fornitori esterni</h2>
+      <p>Possiamo affidare alcune attività di trattamento a fornitori esterni quando necessario per il funzionamento del Servizio. In tal caso, adottiamo misure per garantire che i dati siano trattati in sicurezza nel rispetto della legge applicabile.</p>
+      <h2>6. Diritti degli utenti e modalità di esercizio</h2>
+      <p>È possibile richiedere in qualsiasi momento l’accesso, la rettifica o la cancellazione dei propri dati personali, oppure la sospensione del loro trattamento. Le richieste possono essere inviate tramite i contatti riportati sotto; risponderemo senza ingiustificato ritardo secondo la legge applicabile.</p>
+      <h2>7. Procedure e modalità di cancellazione</h2>
+      <p>Eliminiamo i dati senza ingiustificato ritardo alla scadenza del periodo di conservazione, al raggiungimento delle finalità o quando non sono più necessari. I file elettronici vengono cancellati con metodi tecnici sicuri volti a impedirne il recupero.</p>
+      <h2>8. Misure di protezione</h2>
+      <p>Adottiamo misure organizzative, tecniche e fisiche per proteggere i dati personali. Limitiamo inoltre i privilegi di accesso e ci impegniamo a garantire la sicurezza del trattamento.</p>
+      <h2>9. Dati personali dei minori</h2>
+      <p>Salvo nei casi consentiti dalla legge applicabile, non raccogliamo consapevolmente dati personali dei minori. Se veniamo a conoscenza di tale raccolta, possiamo adottare le misure necessarie.</p>
+      <h2>10. Modifiche alla presente informativa</h2>
+      <p>Possiamo aggiornare questa informativa per riflettere cambiamenti normativi o del Servizio. Comunicheremo le modifiche tramite un avviso nell’app o su questa pagina.</p>
+      <h2>11. Contatti</h2>
+      <ul>
+        <li>Società: Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>Rappresentante: Ji Ye-jin (지예진)</li>
+        <li>Numero di registrazione dell’impresa: 857-86-03315</li>
+        <li>Indirizzo: ufficio 819, 120 Gasan digital 1-ro, Geumcheon-gu, Seul, Repubblica di Corea</li>
+        <li>Telefono assistenza clienti: 0507-1339-1833 (Corea del Sud)</li>
+        <li>Numero di registrazione vendita a distanza: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-id" lang="id" aria-labelledby="title-id" hidden>
+      <h1 id="title-id">Kebijakan Privasi AuraSpot</h1>
+      <p class="date">Tanggal berlaku: 16 Maret 2026</p>
+      <p>Yangbong Co., Ltd. (양봉 주식회사, selanjutnya disebut “Perusahaan”) menghargai privasi pengguna dan mematuhi hukum yang berlaku saat menyediakan AuraSpot (selanjutnya disebut “Layanan”). Kebijakan ini menjelaskan data pribadi yang mungkin kami kumpulkan, cara dan tujuan penggunaannya, serta langkah-langkah perlindungannya.</p>
+      <h2>1. Data pribadi yang mungkin kami kumpulkan</h2>
+      <p>Untuk menyediakan Layanan, kami dapat mengumpulkan informasi berikut:</p>
+      <ul>
+        <li>Identitas akun: alamat email, pengenal login, nama, nama panggilan, dan informasi serupa.</li>
+        <li>Energi kelahiran (Birth Energy): tanggal, waktu, dan tempat lahir, koordinat lokasi kelahiran, serta informasi analisis terkait.</li>
+        <li>Informasi keberuntungan dan hubungan: informasi tentang orang lain yang dimasukkan untuk analisis keberuntungan pribadi dan hubungan, beserta hasil analisisnya.</li>
+        <li>Penggunaan Layanan: pertanyaan yang dimasukkan, harapan dan pesan dukungan, riwayat penggunaan, log dan waktu akses, serta catatan kesalahan.</li>
+        <li>Pembelian dan undangan: status langganan, riwayat pembelian, kode undangan teman, dan riwayat hadiah.</li>
+        <li>Perangkat: model perangkat, sistem operasi, versi aplikasi, dan pengenal perangkat.</li>
+        <li>Kamera dan gambar: gambar yang diambil atau diunggah untuk fitur analisis ruang.</li>
+        <li>Dukungan pelanggan: pertanyaan kepada layanan pelanggan dan catatan tanggapannya.</li>
+      </ul>
+      <h2>2. Tujuan pengumpulan dan penggunaan</h2>
+      <ul>
+        <li>Mengidentifikasi pengguna dan menyediakan Layanan.</li>
+        <li>Menganalisis energi kelahiran berdasarkan K-Astrology dan menyajikan konten keberuntungan yang dipersonalisasi.</li>
+        <li>Melakukan analisis dan menampilkan hasil menggunakan tanggal, waktu, dan tempat lahir serta informasi astronomi dan waktu.</li>
+        <li>Menyediakan analisis hubungan, harapan dan pesan dukungan, serta undangan teman.</li>
+        <li>Menyediakan jawaban AI serta hasil analisis gambar dan ruang.</li>
+        <li>Mengelola langganan dan pembelian, memulihkan pembelian, serta memberikan hadiah.</li>
+        <li>Meningkatkan kualitas dan fitur Layanan serta menangani kesalahan.</li>
+        <li>Menanggapi pertanyaan pelanggan dan menyampaikan pengumuman Layanan.</li>
+        <li>Mencegah penyalahgunaan dan menjaga keamanan Layanan.</li>
+      </ul>
+      <h2>3. Jangka waktu penyimpanan dan penggunaan</h2>
+      <p>Kami menghapus data pribadi tanpa penundaan yang tidak semestinya setelah tujuan pengumpulan dan penggunaannya tercapai. Jika hukum mengharuskan penyimpanan selama periode tertentu, kami dapat menyimpannya selama jangka waktu yang diwajibkan.</p>
+      <ul>
+        <li>Data dihapus tanpa penundaan yang tidak semestinya saat akun ditutup atau tujuan Layanan tercapai.</li>
+        <li>Data disimpan selama periode yang diwajibkan oleh hukum, jika berlaku.</li>
+      </ul>
+      <h2>4. Pengungkapan kepada pihak ketiga</h2>
+      <p>Pada prinsipnya, kami tidak mengungkapkan data pribadi pengguna kepada pihak ketiga di luar Perusahaan. Pengecualian dapat berlaku jika pengguna memberikan persetujuan atau terdapat ketentuan hukum khusus.</p>
+      <h2>5. Pemrosesan oleh penyedia layanan eksternal</h2>
+      <p>Kami dapat mempercayakan kegiatan pemrosesan tertentu kepada penyedia layanan eksternal apabila diperlukan untuk menjalankan Layanan. Dalam hal tersebut, kami mengambil langkah untuk memastikan data pribadi diproses dengan aman sesuai hukum yang berlaku.</p>
+      <h2>6. Hak pengguna dan cara menggunakannya</h2>
+      <p>Anda dapat meminta akses, perbaikan, penghapusan, atau penghentian pemrosesan data pribadi Anda kapan saja. Kirimkan permintaan melalui kontak di bawah; kami akan menanganinya tanpa penundaan yang tidak semestinya sesuai hukum yang berlaku.</p>
+      <h2>7. Prosedur dan metode penghapusan</h2>
+      <p>Kami menghapus data pribadi tanpa penundaan yang tidak semestinya ketika masa penyimpanan berakhir, tujuan pemrosesan tercapai, atau data tidak lagi diperlukan. Berkas elektronik dihapus melalui metode teknis yang aman untuk mencegah pemulihan.</p>
+      <h2>8. Langkah perlindungan</h2>
+      <p>Kami menerapkan langkah administratif, teknis, dan fisik untuk melindungi data pribadi. Kami juga membatasi hak akses dan berupaya memastikan pemrosesan yang aman.</p>
+      <h2>9. Data pribadi anak</h2>
+      <p>Kecuali diizinkan oleh hukum yang berlaku, kami tidak dengan sengaja mengumpulkan data pribadi anak. Jika kami mengetahui bahwa data tersebut telah dikumpulkan, kami dapat mengambil tindakan yang diperlukan.</p>
+      <h2>10. Perubahan kebijakan</h2>
+      <p>Kebijakan ini dapat diperbarui karena perubahan hukum atau Layanan. Perubahan akan diumumkan melalui aplikasi atau halaman ini.</p>
+      <h2>11. Hubungi kami</h2>
+      <ul>
+        <li>Perusahaan: Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>Perwakilan: Ji Ye-jin (지예진)</li>
+        <li>Nomor pendaftaran usaha: 857-86-03315</li>
+        <li>Alamat: Ruang 819, 120 Gasan digital 1-ro, Geumcheon-gu, Seoul, Republik Korea</li>
+        <li>Telepon dukungan pelanggan: 0507-1339-1833 (Korea Selatan)</li>
+        <li>Nomor pendaftaran penjualan jarak jauh: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-th" lang="th" aria-labelledby="title-th" hidden>
+      <h1 id="title-th">นโยบายความเป็นส่วนตัวของ AuraSpot</h1>
+      <p class="date">วันที่มีผลบังคับใช้: 16 มีนาคม 2026</p>
+      <p>Yangbong Co., Ltd. (양봉 주식회사 ซึ่งต่อไปนี้เรียกว่า “บริษัท”) ให้ความสำคัญกับข้อมูลส่วนบุคคลของผู้ใช้และปฏิบัติตามกฎหมายที่เกี่ยวข้องในการให้บริการ AuraSpot (ต่อไปนี้เรียกว่า “บริการ”) นโยบายฉบับนี้อธิบายข้อมูลส่วนบุคคลที่เราอาจเก็บรวบรวม วัตถุประสงค์และวิธีการใช้งาน รวมถึงมาตรการที่ใช้เพื่อคุ้มครองข้อมูลดังกล่าว</p>
+      <h2>1. ข้อมูลส่วนบุคคลที่เราอาจเก็บรวบรวม</h2>
+      <p>เราอาจเก็บรวบรวมข้อมูลต่อไปนี้เพื่อให้บริการ:</p>
+      <ul>
+        <li>ข้อมูลระบุตัวตนบัญชี: ที่อยู่อีเมล รหัสระบุการเข้าสู่ระบบ ชื่อ ชื่อเล่น และข้อมูลในลักษณะเดียวกัน</li>
+        <li>ข้อมูลพลังงานกำเนิด (Birth Energy): วันเดือนปีเกิด เวลาเกิด สถานที่เกิด พิกัดสถานที่เกิด และข้อมูลการวิเคราะห์ที่เกี่ยวข้อง</li>
+        <li>ข้อมูลโชคชะตาและความสัมพันธ์: ข้อมูลของบุคคลอื่นที่ผู้ใช้กรอกเพื่อวิเคราะห์โชคชะตาส่วนบุคคลและความสัมพันธ์ รวมถึงผลการวิเคราะห์</li>
+        <li>ข้อมูลการใช้บริการ: คำถามที่กรอก คำอธิษฐานและข้อความให้กำลังใจ ประวัติการใช้งาน บันทึกและเวลาการเข้าถึง และบันทึกข้อผิดพลาด</li>
+        <li>ข้อมูลการซื้อและการเชิญ: สถานะการสมัครสมาชิก ประวัติการซื้อ รหัสเชิญเพื่อน และประวัติรางวัล</li>
+        <li>ข้อมูลอุปกรณ์: รุ่นอุปกรณ์ ระบบปฏิบัติการ เวอร์ชันแอป และข้อมูลระบุอุปกรณ์</li>
+        <li>ข้อมูลกล้องและรูปภาพ: รูปภาพที่ถ่ายหรืออัปโหลดเพื่อใช้กับฟีเจอร์วิเคราะห์พื้นที่</li>
+        <li>ข้อมูลการติดต่อฝ่ายช่วยเหลือ: รายละเอียดคำถามและประวัติการตอบกลับ</li>
+      </ul>
+      <h2>2. วัตถุประสงค์ในการเก็บรวบรวมและใช้ข้อมูล</h2>
+      <ul>
+        <li>ระบุตัวตนผู้ใช้และให้บริการ</li>
+        <li>วิเคราะห์พลังงานกำเนิดตามแนวคิด K-Astrology และนำเสนอเนื้อหาโชคชะตาเฉพาะบุคคล</li>
+        <li>วิเคราะห์และแสดงผลโดยใช้วัน เวลา และสถานที่เกิด รวมถึงข้อมูลดาราศาสตร์และข้อมูลเวลา</li>
+        <li>ให้บริการวิเคราะห์ความสัมพันธ์ คำอธิษฐานและข้อความให้กำลังใจ และการเชิญเพื่อน</li>
+        <li>ให้คำตอบจาก AI และผลการวิเคราะห์รูปภาพและพื้นที่</li>
+        <li>จัดการการสมัครสมาชิกและการซื้อ กู้คืนรายการซื้อ และมอบรางวัล</li>
+        <li>ปรับปรุงคุณภาพและฟีเจอร์ของบริการ รวมถึงแก้ไขข้อผิดพลาด</li>
+        <li>ตอบคำถามจากผู้ใช้และแจ้งข่าวสารเกี่ยวกับบริการ</li>
+        <li>ป้องกันการใช้งานในทางที่ผิดและรักษาความปลอดภัยของบริการ</li>
+      </ul>
+      <h2>3. ระยะเวลาการเก็บรักษาและใช้ข้อมูล</h2>
+      <p>บริษัทจะลบข้อมูลส่วนบุคคลโดยไม่ล่าช้าเกินสมควรเมื่อบรรลุวัตถุประสงค์ในการเก็บรวบรวมและใช้ข้อมูลแล้ว อย่างไรก็ตาม หากกฎหมายกำหนดให้เก็บรักษาข้อมูลไว้เป็นระยะเวลาหนึ่ง บริษัทอาจเก็บข้อมูลตามระยะเวลาที่กฎหมายกำหนด</p>
+      <ul>
+        <li>ลบข้อมูลโดยไม่ล่าช้าเกินสมควรเมื่อปิดบัญชีหรือบรรลุวัตถุประสงค์ของบริการ</li>
+        <li>เก็บรักษาข้อมูลตามระยะเวลาที่กฎหมายกำหนด หากมีหน้าที่ดังกล่าว</li>
+      </ul>
+      <h2>4. การเปิดเผยข้อมูลแก่บุคคลภายนอก</h2>
+      <p>ตามหลักการแล้ว บริษัทจะไม่เปิดเผยข้อมูลส่วนบุคคลของผู้ใช้แก่บุคคลภายนอก ยกเว้นเมื่อผู้ใช้ให้ความยินยอมหรือมีกฎหมายกำหนดไว้เป็นการเฉพาะ</p>
+      <h2>5. การมอบหมายให้ผู้ให้บริการภายนอกประมวลผลข้อมูล</h2>
+      <p>บริษัทอาจมอบหมายงานประมวลผลบางส่วนให้แก่ผู้ให้บริการภายนอกเท่าที่จำเป็นต่อการให้บริการ ในกรณีดังกล่าว บริษัทจะดำเนินมาตรการเพื่อให้มีการจัดการข้อมูลอย่างปลอดภัยตามกฎหมายที่เกี่ยวข้อง</p>
+      <h2>6. สิทธิของผู้ใช้และวิธีใช้สิทธิ</h2>
+      <p>ผู้ใช้สามารถขอเข้าถึง แก้ไข ลบ หรือระงับการประมวลผลข้อมูลส่วนบุคคลของตนได้ทุกเมื่อ โดยติดต่อผ่านช่องทางด้านล่าง บริษัทจะดำเนินการโดยไม่ล่าช้าเกินสมควรตามกฎหมายที่เกี่ยวข้อง</p>
+      <h2>7. ขั้นตอนและวิธีการลบข้อมูล</h2>
+      <p>บริษัทจะลบข้อมูลโดยไม่ล่าช้าเกินสมควรเมื่อครบระยะเวลาเก็บรักษา บรรลุวัตถุประสงค์ในการประมวลผล หรือไม่มีความจำเป็นต้องใช้ข้อมูลอีกต่อไป ไฟล์อิเล็กทรอนิกส์จะถูกลบด้วยวิธีการทางเทคนิคที่ปลอดภัยเพื่อป้องกันการกู้คืน</p>
+      <h2>8. มาตรการรักษาความปลอดภัยของข้อมูล</h2>
+      <p>บริษัทใช้มาตรการด้านการบริหารจัดการ เทคนิค และกายภาพเพื่อคุ้มครองข้อมูลส่วนบุคคล รวมถึงจำกัดสิทธิการเข้าถึงและพยายามให้มั่นใจว่ามีการประมวลผลข้อมูลอย่างปลอดภัย</p>
+      <h2>9. ข้อมูลส่วนบุคคลของเด็ก</h2>
+      <p>บริษัทจะไม่เก็บรวบรวมข้อมูลส่วนบุคคลของเด็กโดยเจตนา เว้นแต่กฎหมายที่เกี่ยวข้องจะอนุญาต หากพบว่ามีการเก็บรวบรวมข้อมูลดังกล่าว บริษัทอาจดำเนินมาตรการที่จำเป็น</p>
+      <h2>10. การเปลี่ยนแปลงนโยบาย</h2>
+      <p>บริษัทอาจปรับปรุงนโยบายนี้เพื่อให้สอดคล้องกับกฎหมายหรือการเปลี่ยนแปลงของบริการ และจะแจ้งผ่านประกาศในแอปหรือบนหน้านี้</p>
+      <h2>11. ช่องทางติดต่อ</h2>
+      <ul>
+        <li>บริษัท: Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>ผู้แทนบริษัท: Ji Ye-jin (지예진)</li>
+        <li>เลขทะเบียนธุรกิจ: 857-86-03315</li>
+        <li>ที่อยู่: ห้อง 819 เลขที่ 120 Gasan digital 1-ro เขต Geumcheon-gu กรุงโซล สาธารณรัฐเกาหลี</li>
+        <li>โทรศัพท์ฝ่ายช่วยเหลือลูกค้า: 0507-1339-1833 (เกาหลีใต้)</li>
+        <li>เลขทะเบียนการขายทางไกล: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
+    <article id="policy-vi" lang="vi" aria-labelledby="title-vi" hidden>
+      <h1 id="title-vi">Chính sách quyền riêng tư của AuraSpot</h1>
+      <p class="date">Ngày có hiệu lực: 16/03/2026</p>
+      <p>Yangbong Co., Ltd. (양봉 주식회사, sau đây gọi là “Công ty”) coi trọng thông tin cá nhân của người dùng và tuân thủ pháp luật hiện hành khi cung cấp AuraSpot (sau đây gọi là “Dịch vụ”). Chính sách này giải thích những thông tin cá nhân chúng tôi có thể thu thập, cách thức và mục đích sử dụng cũng như các biện pháp bảo vệ thông tin đó.</p>
+      <h2>1. Thông tin cá nhân có thể được thu thập</h2>
+      <p>Để cung cấp Dịch vụ, chúng tôi có thể thu thập các thông tin sau:</p>
+      <ul>
+        <li>Thông tin nhận dạng tài khoản: địa chỉ email, mã định danh đăng nhập, họ tên, biệt danh và thông tin tương tự.</li>
+        <li>Thông tin năng lượng khi sinh (Birth Energy): ngày, giờ, nơi sinh, tọa độ nơi sinh và dữ liệu phân tích liên quan.</li>
+        <li>Thông tin vận may và mối quan hệ: thông tin về người khác được nhập để phân tích vận may cá nhân và mối quan hệ, cùng kết quả phân tích.</li>
+        <li>Thông tin sử dụng Dịch vụ: câu hỏi đã nhập, điều ước và lời nhắn động viên, lịch sử sử dụng, nhật ký và thời điểm truy cập, bản ghi lỗi.</li>
+        <li>Thông tin mua hàng và lời mời: trạng thái đăng ký gói, lịch sử mua hàng, mã mời bạn bè và lịch sử nhận thưởng.</li>
+        <li>Thông tin thiết bị: mẫu thiết bị, hệ điều hành, phiên bản ứng dụng và mã định danh thiết bị.</li>
+        <li>Thông tin máy ảnh và hình ảnh: ảnh được chụp hoặc tải lên để sử dụng tính năng phân tích không gian.</li>
+        <li>Thông tin hỗ trợ khách hàng: nội dung yêu cầu hỗ trợ và lịch sử phản hồi.</li>
+      </ul>
+      <h2>2. Mục đích thu thập và sử dụng</h2>
+      <ul>
+        <li>Xác định danh tính người dùng và cung cấp Dịch vụ.</li>
+        <li>Phân tích năng lượng khi sinh dựa trên K-Astrology và cung cấp nội dung vận may được cá nhân hóa.</li>
+        <li>Phân tích và hiển thị kết quả dựa trên ngày, giờ, nơi sinh cùng thông tin thiên văn và thời gian.</li>
+        <li>Cung cấp tính năng phân tích mối quan hệ, điều ước và lời nhắn động viên, lời mời bạn bè.</li>
+        <li>Cung cấp câu trả lời bằng AI và kết quả phân tích hình ảnh, không gian.</li>
+        <li>Quản lý gói đăng ký và mua hàng, khôi phục giao dịch mua và trao thưởng.</li>
+        <li>Cải thiện chất lượng, tính năng Dịch vụ và xử lý lỗi.</li>
+        <li>Trả lời yêu cầu hỗ trợ và gửi thông báo về Dịch vụ.</li>
+        <li>Ngăn chặn hành vi lạm dụng và bảo đảm an toàn cho Dịch vụ.</li>
+      </ul>
+      <h2>3. Thời hạn lưu giữ và sử dụng</h2>
+      <p>Chúng tôi sẽ xóa thông tin cá nhân không chậm trễ quá mức khi mục đích thu thập và sử dụng đã hoàn thành. Nếu pháp luật yêu cầu lưu giữ trong một khoảng thời gian nhất định, chúng tôi có thể lưu giữ theo thời hạn đó.</p>
+      <ul>
+        <li>Xóa thông tin không chậm trễ quá mức khi người dùng đóng tài khoản hoặc mục đích cung cấp Dịch vụ đã hoàn thành.</li>
+        <li>Lưu giữ thông tin trong thời hạn bắt buộc nếu pháp luật có yêu cầu.</li>
+      </ul>
+      <h2>4. Cung cấp thông tin cho bên thứ ba</h2>
+      <p>Về nguyên tắc, chúng tôi không cung cấp thông tin cá nhân của người dùng cho bên thứ ba bên ngoài. Ngoại lệ có thể áp dụng khi người dùng đồng ý hoặc pháp luật có quy định đặc biệt.</p>
+      <h2>5. Ủy thác xử lý thông tin cá nhân</h2>
+      <p>Chúng tôi có thể giao một số hoạt động xử lý cho nhà cung cấp dịch vụ bên ngoài khi cần thiết để vận hành Dịch vụ. Trong trường hợp đó, chúng tôi áp dụng các biện pháp bảo đảm thông tin được xử lý an toàn theo pháp luật hiện hành.</p>
+      <h2>6. Quyền của người dùng và cách thực hiện</h2>
+      <p>Bạn có thể yêu cầu truy cập, chỉnh sửa, xóa hoặc ngừng xử lý thông tin cá nhân của mình bất cứ lúc nào. Vui lòng gửi yêu cầu qua thông tin liên hệ bên dưới; chúng tôi sẽ giải quyết không chậm trễ quá mức theo pháp luật hiện hành.</p>
+      <h2>7. Quy trình và phương thức xóa dữ liệu</h2>
+      <p>Chúng tôi sẽ xóa thông tin cá nhân không chậm trễ quá mức khi hết thời hạn lưu giữ, đã đạt mục đích xử lý hoặc thông tin không còn cần thiết. Các tệp điện tử được xóa bằng phương pháp kỹ thuật an toàn nhằm ngăn khả năng khôi phục.</p>
+      <h2>8. Biện pháp bảo vệ thông tin</h2>
+      <p>Chúng tôi áp dụng các biện pháp quản lý, kỹ thuật và vật lý để bảo vệ thông tin cá nhân, đồng thời giới hạn quyền truy cập và nỗ lực bảo đảm việc xử lý thông tin an toàn.</p>
+      <h2>9. Thông tin cá nhân của trẻ em</h2>
+      <p>Trừ trường hợp pháp luật hiện hành cho phép, chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em. Nếu phát hiện đã thu thập thông tin đó, chúng tôi có thể thực hiện các biện pháp cần thiết.</p>
+      <h2>10. Thay đổi chính sách</h2>
+      <p>Chính sách này có thể được cập nhật khi pháp luật hoặc Dịch vụ thay đổi. Chúng tôi sẽ thông báo trong ứng dụng hoặc trên trang này.</p>
+      <h2>11. Liên hệ</h2>
+      <ul>
+        <li>Công ty: Yangbong Co., Ltd. (양봉 주식회사)</li>
+        <li>Người đại diện: Ji Ye-jin (지예진)</li>
+        <li>Mã số đăng ký doanh nghiệp: 857-86-03315</li>
+        <li>Địa chỉ: Phòng 819, số 120 Gasan digital 1-ro, Geumcheon-gu, Seoul, Hàn Quốc</li>
+        <li>Điện thoại hỗ trợ khách hàng: 0507-1339-1833 (Hàn Quốc)</li>
+        <li>Số đăng ký bán hàng từ xa: 2025-서울금천-1329호</li>
+      </ul>
+    </article>
   </main>
-
   <script>
-    (function () {
+    (function() {
       'use strict';
-      var btnKo = document.getElementById('choose-ko');
-      var btnEn = document.getElementById('choose-en');
-      var pageKo = document.getElementById('policy-ko');
-      var pageEn = document.getElementById('policy-en');
-      var storageKey = 'auraspot_privacy_language';
-
-      function setLanguage(lang, remember) {
-        var english = lang === 'en';
-        pageKo.hidden = english;
-        pageEn.hidden = !english;
-        btnKo.setAttribute('aria-pressed', String(!english));
-        btnEn.setAttribute('aria-pressed', String(english));
-        document.documentElement.lang = english ? 'en' : 'ko';
-        document.title = english ? 'AuraSpot Privacy Policy' : 'AuraSpot 개인정보처리방침';
+      var supported = ['ko','en','ja','zh-Hans','zh-Hant','es','fr','de','pt','it','id','th','vi'];
+      var select = document.getElementById('language-select');
+      var key = 'auraspot_privacy_language_v13';
+      function valid(code) { return supported.indexOf(code) !== -1; }
+      function changeLanguage(code, remember) {
+        if (!valid(code)) code = 'en';
+        supported.forEach(function(c) {
+          document.getElementById('policy-' + c).hidden = c !== code;
+        });
+        select.value = code;
+        document.documentElement.lang = code;
+        var heading = document.querySelector('#policy-' + code + ' h1');
+        document.title = heading ? heading.textContent : 'AuraSpot Privacy Policy';
         if (remember) {
-          try { localStorage.setItem(storageKey, english ? 'en' : 'ko'); } catch (e) { /* Storage may be unavailable. */ }
+          try { localStorage.setItem(key, code); } catch(e) { /* optional storage */ }
         }
       }
-
-      btnKo.addEventListener('click', function () { setLanguage('ko', true); });
-      btnEn.addEventListener('click', function () { setLanguage('en', true); });
-
-      var saved = null;
-      try { saved = localStorage.getItem(storageKey); } catch (e) { /* Storage may be unavailable. */ }
-      var browserLang = (navigator.language || 'ko').toLowerCase();
-      var initialLang = saved === 'ko' || saved === 'en'
-        ? saved
-        : (browserLang.indexOf('ko') === 0 ? 'ko' : 'en');
-      setLanguage(initialLang, false);
-    }());
+      select.addEventListener('change', function() { changeLanguage(select.value, true); });
+      // Default on a first visit is always English, irrespective of the browser language.
+      // An explicit ?lang= code takes priority, followed by a previously selected language.
+      var initial = 'en';
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var requested = params.get('lang');
+        var saved = localStorage.getItem(key);
+        if (valid(requested)) initial = requested;
+        else if (valid(saved)) initial = saved;
+      } catch(e) { /* Private browsing or older WebViews: use English. */ }
+      changeLanguage(initial, false);
+    })();
   </script>
 </body>
 </html>
